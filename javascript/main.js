@@ -24,6 +24,7 @@ var image_array = ['img/logo.png',
                             'img/green.jpg',
                             'img/stock.jpg',
                             'img/first_badge.jpg',
+                            'img/chickens.png',
                             'img/chilling.jpg',
                             'img/img_willpot.jpg'];
 
@@ -32,7 +33,7 @@ var i = 0;
 $("#left_arrow").on('click', function(){
     
    
-
+    clearInterval(inter);
     
     if(i >= 0){
        console.log(image_array[i]);
@@ -46,7 +47,7 @@ $("#left_arrow").on('click', function(){
 });
 
 $("#right_arrow").on('click', function(){
-    
+    clearInterval(inter);
     
     if(i < image_array.length){
         console.log(image_array[i]);
@@ -57,3 +58,17 @@ $("#right_arrow").on('click', function(){
        }
     }
 });
+
+
+function slide(){
+    if(i < image_array.length){
+        
+        document.getElementById("carousel_image").src = image_array[i];
+        i++;
+       if(i == (image_array.length-1)){
+           i = 0;
+       }
+    }
+}
+
+var inter = setInterval(slide, 5000);
