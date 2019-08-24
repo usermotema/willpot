@@ -22,10 +22,10 @@ $('.sign_up').on('click',function(){
 var image_array = ['img/logo.png',
                             
                             'img/green.jpg',
-                            'img/stock.JPG',
-                            'img/first_badge.JPG',
-                            'img/chilling.JPG',
-                            'img/img_willpot.JPG'];
+                            'img/stock.jpg',
+                            'img/first_badge.jpg',
+                            'img/chilling.jpg',
+                            'img/img_willpot.jpg'];
 
 var i = 0;
 
